@@ -31,8 +31,8 @@ class AGQADataset:
         # path configs
 
         # todo: Plase replace following data path to your local path
-        root_dir = '//'
-        annotation_dir = root_dir + '/'
+        root_dir = './'
+        annotation_dir = root_dir + 'annotations/'
 
         self.num_rel = 8
         self.num_situations = 16
@@ -164,10 +164,10 @@ class AGQATorchDataset(Dataset):
         self.data = self.raw_dataset.data
 
         #todo: REPLACE WITH YOUR DIRECTORIES
-        root_dir = '/'
-        self.annotation_dir = root_dir + '/'
-        self.video_dir = '/datasets/Charades/data/Charades_v1_480'
-        self.frame_dir = '/datasets/ActionGenome/dataset/ag/frames'
+        root_dir = './'
+        self.annotation_dir = root_dir + 'annotations/'
+        self.video_dir = './dataset/ag/videos/'
+        self.frame_dir = './dataset/ag/frames/'
 
         self.clip_len = 16
         self.num_rel = 8
